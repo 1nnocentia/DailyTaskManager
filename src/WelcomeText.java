@@ -1,15 +1,26 @@
 class WelcomeText {
-    public static void welcome(){
-        System.out.println("\n***********************\n");
-        System.out.println("  Daily Task Manager\n");
-        System.out.println("***********************\n");
-    }
+    public static void show() throws InterruptedException{
+        String[] colours = {
+            "\u001B[31m", //Red
+            "\u001B[32m", //Green
+            "\u001B[33m", //Yellow
+            "\u001B[34m", //Blue
+            "\u001B[35m", //Purple
+            "\u001B[36m"  //Cyan
+        };
 
-    public static void listTask(){
-        System.out.println("1. Check Email ");
-        System.out.println("2. Attend Lecture");
-        System.out.println("3. Exercise");
-        System.out.println("4.");
-        System.out.println("5.");
+        String reset = "\u001B[0m";
+
+        for(int i = 0; i < 10; i++) {
+            String colour = colours[i % colours.length];
+
+            System.out.println(colour + "\n**************************\n" + reset);
+            System.out.println("\u001B[31m \033[1m Welcome\u001B[0m to Daily Task Manager\n");
+            System.out.println(colour + "**************************\n" + reset);
+            
+            Thread.sleep(500);
+            MaybeWeNeedThis.clearScreen();
+        }
+
     }
 }
