@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class DailyTaskManager {
 
     public static void main(String[] args) throws Exception {
-        WelcomeText.show();
+        //WelcomeText.show();
         System.out.println("     Daily Task Manager     ");
         System.out.println("     *******************");
     }
