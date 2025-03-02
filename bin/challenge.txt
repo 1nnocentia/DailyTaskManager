@@ -1,1 +1,7 @@
 1. Waktu mau buat looping input user untuk option di main windownya, saya kasih inputvalidation, error messagenya keluar, tapi langsung berhenti programnya (harusnya keluar error message dan user input ulang lagi). Jadi saya bertanya ke chatgpt, ternyata di main programnya harus pakai try catch supaya programnya tetap jalan.
+Lalu ternyata setelah buat try catch, masalah baru muncul. Karena saat run programnya, saat setelah error message muncul, tidak langsung menanyakan ulang user untuk input optionchoice. Harus enter sekali baru muncul lagi. Ternyata harus pakai nextLine() --awalnya pakai nextInt(). Kenapa pakai nextLine? karena program akan error kalau mendapatkan input String, jadi kalau inputnya String, inputnya akan tertinggal dalam buffer dan menyebabkan error berulang. Jadi fungsinya nextLine() di kasus ini itu untuk hapus input yang salah dari buffer dan minta input ulang.
+*notes buat inno: 
+--buffer = tempat penyimpanan sementara untuk data sebelum diproses lebih lanjut
+buffer itu kayak keranjang belanja, Scannernya itu kasir (baca barang satu per satu) lalu program itu sistem pembayarannya (mengolah data setelah dibaca scanner)
+kalau tanpa buffer berarti harus proses tiap barang satu-satu tanpa disimpan dulu, jadi akan lebih lambat.
+Jadi, scanner.nextLine() bisa digunakan untuk membersihkan buffer sebelum membaca String.
