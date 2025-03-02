@@ -15,22 +15,19 @@ public class DailyTaskManager {
 
         //WelcomeText.show();
         MainWindow.mainWindow();
-        while (true) {   
-            try {
-                System.out.print("Choose an option (1-4): ");
-                optionChoice = scanner.nextInt();
-
-                // Validasi input menggunakan class InputValidation
-                InputValidation.optionValid(optionChoice);
-
-                break; // Keluar dari loop jika input valid
+        while (true) {
+            try {    
+            System.out.print("Choose an option: ");
+            optionChoice = scanner.nextInt();
+            InputValidation.optionValid(optionChoice);
+            break;
             } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage()); // Pesan error dari InputValidation
-                scanner.nextLine(); // Bersihkan buffer input agar tidak loop tanpa henti
+                System.out.println(e.getMessage());
+                scanner.nextLine();
             } catch (Exception e) {
                 System.out.println("Invalid input. Please enter a number between 1 and 4.");
-                scanner.nextLine(); // Bersihkan buffer input
+                scanner.nextLine();
             }
         }
-        }
     }
+}
