@@ -1,0 +1,1 @@
+1. Waktu mau buat looping input user untuk option di main windownya, saya kasih inputvalidation, error messagenya keluar, tapi langsung berhenti programnya (harusnya keluar error message dan user input ulang lagi). Jadi saya bertanya ke chatgpt, ternyata di main programnya harus pakai try catch supaya programnya tetap jalan.
