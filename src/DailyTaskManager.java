@@ -29,5 +29,13 @@ public class DailyTaskManager {
                 scanner.nextLine();
             }
         }
+        switch (optionChoice) {
+            case 1 -> 
+                
+                break;
+        
+            default:
+                break;
+        }
     }
 }
